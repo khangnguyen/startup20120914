@@ -6,3 +6,4 @@ index.php
 protected/scripts/set_env.sh
 protected/config/db.json
 protected/config/local.php
+*.*~
