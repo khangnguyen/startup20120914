@@ -2,22 +2,22 @@
 
 return array(
     'params'=>array(
-        'home_url' => 'http://lewisiselin.cogini.com', // Where top level link goes to
+        'home_url' => 'http://startup.cogini.com', // Where top level link goes to
 
         // Used in the contact page
-        'adminEmail'=>'support@vagrant.local',
+        'adminEmail'=>'khang@cogini.com',
 
         // This is used as the sender of emails
-        'app_email_name' => 'Lewis Iselin',
-        'app_email' => 'support@vagrant.local',
+        'app_email_name' => 'Cogini Webapp',
+        'app_email' => 'khang@cogini.com',
         'email_prefix' => '[Lewis Iselin] ',
 
-        'support_email' => 'support@vagrant.local',
+        'support_email' => 'khang@cogini.com',
         'email_prefix' => '', // put at the begining of the subject line
-        'contact_email' => 'support@vagrant.local', // this is used in the contact page
+        'contact_email' => 'khang@cogini.com', // this is used in the contact page
 
         // Notified when a new user signs up
-        'notify_email' => 'support@vagrant.local',
+        'notify_email' => 'khang@cogini.com',
 
         // Cogini
         'recaptcha_publickey' => '6LdkzgsAAAAAAGFJ5GdJyXf4JvFqKJe5N0-F3IRt',

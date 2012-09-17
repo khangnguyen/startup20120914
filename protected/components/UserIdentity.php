@@ -5,7 +5,7 @@ class UserIdentity extends CUserIdentity {
     public $_id;
 
 	public function authenticate() {
-        $user = User::model()->findByAttributes(array('userid'=>$this->username));
+        $user = Designer::model()->findByAttributes(array('userid'=>$this->username));
 
         if ($user===null)
             $this->errorCode = self::ERROR_USERNAME_INVALID;

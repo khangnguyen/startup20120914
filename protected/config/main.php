@@ -4,12 +4,12 @@ $dbConfig = json_decode(file_get_contents(dirname(__FILE__).'/db.json'), true);
 $pre_config = require(dirname(__FILE__).'/local.php');
 
 // Location where user images are stored
-//Yii::setPathOfAlias('uploadPath', realpath(dirname(__FILE__). '/../../images/uploads'));
-//Yii::setPathOfAlias('uploadURL', '/images/uploads/');
+Yii::setPathOfAlias('uploadPath', realpath(dirname(__FILE__). '/../../images/uploads'));
+Yii::setPathOfAlias('uploadURL', '/images/uploads/');
 
 return CMap::mergeArray(array(
     'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-    'name'=>'Cogini Webapp',
+    'name'=>'Spinning Jennie',
 
     'preload'=>array('log'),
 
@@ -19,6 +19,16 @@ return CMap::mergeArray(array(
         'application.behaviors.*',
         'application.vendors.*',
         'application.helpers.*',
+        'application.extensions.*',
+    ),
+
+    'modules'=>array(
+        // uncomment the following to enable the Gii tool
+       'gii'=>array(
+           'class'=>'system.gii.GiiModule',
+           'password'=>'yii',
+           'ipFilters'=>array('171.242.54.142'),
+        ),
     ),
 
     'components'=>array(
@@ -31,6 +41,10 @@ return CMap::mergeArray(array(
             'persistent'=>true,
             'enableParamLogging'=>true,
             'schemaCachingDuration'=>30
+        ),
+        'image'=>array(
+		       'class'=>'application.extensions.image.CImageComponent',
+		       'driver'=>'GD',
         ),
         'cache' => array(
             'class' => 'system.caching.CFileCache'

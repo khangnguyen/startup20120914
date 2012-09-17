@@ -4,6 +4,7 @@ class SiteController extends Controller {
     /**
  	 * Declares class-based actions.
 	 */
+        public $layout='//layouts/main';
 	public function actions() {
 		return array(
 			# captcha action renders the CAPTCHA image displayed on the contact page
@@ -24,16 +25,13 @@ class SiteController extends Controller {
 	 * when an action is not explicitly requested by users.
 	 */
 	public function actionIndex() {
-	    #if (Yii::app()->user->isGuest) {
-        #    $this->render('index');
-        #} else {
-        #    if (Yii::app()->user->checkAccess('admin')) {
-        #        $this->redirect(array('admin/index'));
-        #    } else {
-        #        $this->redirect(array('user/accountBalance', 'id'=>Yii::app()->user->_id));
-        #    }
-	    #} 
-        $this->render('index');
+	  $designers = new CActiveDataProvider('Designer', array(
+								 'criteria'=>array('order'=>'position')));
+	  $this->render('index', array('designers'=>$designers));
+	}
+
+	public function actionAbout() {
+	  $this->render('about');
 	}
 
 	private function loadUser() {

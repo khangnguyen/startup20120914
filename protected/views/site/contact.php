@@ -1,3 +1,4 @@
+<div class="content-site">
 <?
 $this->pageTitle=Yii::app()->name . ' - Contact Us';
 $this->breadcrumbs=array(
@@ -60,3 +61,4 @@ $this->breadcrumbs=array(
 </div><!-- form -->
 
 <? } ?>
+</div>

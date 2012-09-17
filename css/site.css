@@ -1,0 +1,24 @@
+.navbar .nav {
+    float: right;
+}
+
+.navbar-inner {
+    background: transparent;
+    box-shadow: none !important;
+    border: 1px solid black;
+}
+
+.twitter-share-button {
+    margin: 10px 0 0 0; float: right;
+    width: 90px !important;
+}
+
+.content-site {
+border: 1px solid gray;padding: 40px;background: white;border-radius: 15px;width: 620px;
+margin: 290px auto 0;
+}
+
+.content-no-site {
+border: 1px solid gray;padding: 40px;background: white;border-radius: 15px;width: 620px;
+margin: 20px auto 0;
+}
